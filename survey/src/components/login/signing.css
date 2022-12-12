@@ -1,0 +1,148 @@
+.App {}
+
+
+.SignIn,
+.SignUp {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid rgba(213, 213, 213, 0.553);
+}
+
+.SignIn h1,
+.SignUp h1 {
+    text-transform: capitalize;
+    color: hwb(207 27% 29%);
+    font-size: 1.9em;
+}
+
+.SignUp .Intro {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+}
+
+.SignIn .Intro {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+}
+.SignIn section .error-message,.SignUp section .error-message{
+color: red;
+font-weight: 600;
+
+}
+.SignIn .Input,
+.SignUp .Input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SignIn .Input label,
+.SignUp .Input label {
+    font-weight: lighter;
+    margin: 20px 0 5px;
+}
+
+.SignIn .Input input,
+.SignUp .Input input {
+    outline: none;
+    height: 25px;
+    border: none;
+    padding: 5px;
+    font-size: 0.85em;
+    background-color: hwb(207 66% 5% / 0.231);
+}
+
+.SignIn .Input.Password,
+.SignUp .Input.Input.Password {
+    position: relative;
+}
+
+.SignIn .Input.Password .eye,
+.SignUp .Input.Input.Password .eye {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.SignIn button,
+.SignUp button {
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    background: hwb(207 27% 29%);
+    border-radius: 5px;
+}
+
+.SignIn section .remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.SignIn section .remember-me p {
+    font-size: 0.8em;
+}
+
+.SignIn section .remember-me input {
+    padding: 0;
+    margin-top: 7px;
+    height: 10px;
+}
+
+.SignIn .Newlink p,
+.SignUp .Newlink p {
+    font-size: 0.9em;
+}
+
+.SignIn .Newlink span,
+.SignUp .Newlink span {
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+
+@media (min-width: 600px) {
+
+    .SignIn,
+    .SignUp {
+        width: 60%;
+    }
+}
+@media (min-width: 700px) {
+
+    .SignIn,
+    .SignUp {
+        width: 50%;
+    }
+}
+@media (min-width: 800px) {
+
+    .SignIn,
+    .SignUp {
+        width: 40%;
+    }
+}
+@media (min-width: 900px) {
+
+    .SignIn,
+    .SignUp {
+        width: 35%;
+    }
+}
+@media (min-width: 1000px) {
+
+    .SignIn,
+    .SignUp {
+        width: 30%;
+    }
+}

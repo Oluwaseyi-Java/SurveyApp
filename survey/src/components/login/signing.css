@@ -12,7 +12,7 @@
 .SignIn h1,
 .SignUp h1 {
     text-transform: capitalize;
-    color: hwb(207 27% 29%);
+    color: rgb(69, 131, 181);
     font-size: 1.9em;
 }
 

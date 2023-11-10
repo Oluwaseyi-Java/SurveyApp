@@ -1,0 +1,277 @@
+p {
+    color: hsl(228, 34%, 66%);
+}
+
+.App-header h2 {
+    color: white;
+}
+
+.App-header {
+    background: hsl(232, 19%, 15%);
+    padding: 2px 5% 20px 5%;
+}
+
+.App-header hr {
+    height: 1px;
+    border: none;
+    background: white;
+}
+
+.App .first {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.App .first .Cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.App .first .Card {
+    background: hsl(227, 47%, 96%);
+    padding: 25px 0;
+    margin: 25px 0 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.App .first .Card .box {
+    width: 80%;
+    margin: auto;
+}
+
+.App .first .CardAdd {
+    border: 2px dotted hsla(229, 27%, 20%, 0.332);
+}
+
+.App .first .CardAdd .add {
+
+    padding: 0;
+}
+
+.App .first .CardAdd .add p {
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+}
+
+.App .first .Card p {
+    text-align: left;
+}
+
+.App .first .title {
+    text-align: left;
+    color: hsl(228, 28%, 20%);
+}
+
+.App .first .Card:hover {
+    background: hsl(225, 8%, 90%);
+    ;
+}
+
+.Modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.207);
+    top: 0;
+}
+
+.Modal .add-con {
+    width: 60%;
+    min-height: 200px;
+    margin: 50% auto 0;
+    background: white;
+    padding: 20px;
+    color: black;
+
+}
+
+.Modal .add-con hr {
+    border: none;
+    height: 1px;
+    background: hsla(229, 27%, 20%, 0.395);
+}
+
+.Modal .add-con #header p {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    color: hsl(232, 19%, 15%);
+}
+
+.Modal .add-con #header:nth-child(1) {
+    cursor: pointer;
+}
+
+.Modal .add-con #header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Modal .add-con #form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Modal .add-con #form label {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.Modal .add-con #form input {
+    outline: none;
+    height: 15px;
+    padding: 5px 4px;
+    font-size: 15px;
+
+}
+
+.Modal .add-con #form button {
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    background: hsl(228, 28%, 20%);
+
+}
+
+.FeedbackDataView {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.FeedbackDataView .Head .title {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.FeedbackDataView .Head .title h1 {
+    margin: 0;
+}
+
+.FeedbackDataView .Head .title #btn button {
+    border: none;
+    font-size: 1em;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+    background: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+.FeedbackDataView .Head .Lead {
+    display: flex;
+    gap: 5%;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgb(62, 62, 62);
+}
+
+.FeedbackDataView .Head .Lead p {
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
+
+}
+
+.FeedbackDataView .Head .Lead p:hover {
+    color: rgb(12, 114, 215);
+    border-bottom: 1px solid rgb(12, 114, 215);
+}
+
+article .Filter {
+    display: flex;
+    gap: 10px;
+}
+
+article .Filter div {
+    display: flex;
+    margin: 20px 0;
+}
+
+article .Filter div p {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+article .Filter div #a1 {
+    color: white;
+    padding: 5px;
+    background: hsl(228, 28%, 20%);
+}
+
+article .Filter div #a2 {
+    padding: 5px;
+    background: white;
+    border: 1px solid hsl(228, 28%, 20%);
+}
+
+article .Content-Header div input {
+    background-color: hsl(228, 28%, 20%);
+}
+
+article .Content-Header div {
+    display: flex;
+    border-top: 1px solid #888;
+}
+
+article .Content-Header div p {
+    padding: 5px 15px;
+}
+
+article .Content-Header div span {
+    margin: auto 0;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+article .Content-Header div span .StarSelect {
+    color: hsl(228, 28%, 20%);
+}
+
+article .Content-Header div span .NotSelected {
+    color: rgb(190, 190, 190);
+}
+
+
+
+@media (min-width:600px) {
+    .App .first .Cards {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .App .first .Card {
+        width: 45%;
+    }
+
+    .Modal .add-con {
+        width: 50%;
+        margin: 30% auto 0;
+    }
+}
+
+@media (min-width:850px) {
+    .App .first .Card {
+        width: 30%;
+    }
+
+    .Modal .add-con {
+        width: 30%;
+        margin: 18% auto 0;
+    }
+}

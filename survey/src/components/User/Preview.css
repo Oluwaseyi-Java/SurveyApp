@@ -1,0 +1,135 @@
+.Preview-Body {
+    width: 90%;
+    margin: auto;
+}
+
+/* .Preview {} */
+
+.Preview h1 {
+    font-size: 1.6em;
+    text-transform: capitalize;
+    text-align: left;
+    padding: 10px 0 0 5px;
+    color: #252a41d9;
+}
+
+.Preview .Field {
+    background-color: white;
+    padding: 20px 5%;
+}
+
+.Preview .Field .sub-Field {
+    padding: 10px 0;
+}
+
+.Preview .Field .sub-Field label {
+    font-size: 1.3em;
+    text-transform: capitalize;
+    padding: 5px 0;
+    color: #535353;
+    font-weight: 600;
+}
+
+.Preview .Field .sub-Field input {
+    outline: none;
+    color: #3b3b3b;
+    border: 1px solid rgba(109, 109, 109, 0.548);
+    font-size: 1.2em;
+    height: 25px;
+
+}
+
+.Preview .Field .sub-Field input[type=number] {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+.Preview .Field .sub-Field input[type=tel] {
+
+    margin: 10px 0;
+    width: 100%;
+}
+
+.Preview .Field .sub-Field input[type=url] {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+.Preview .Field .sub-Field input[type=color] {
+
+    margin: 10px 0;
+    width: 30%;
+    height: 40px;
+    padding: 0;
+    border: none;
+
+}
+
+.Preview .Field .sub-Field input[type=file] {
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px 0 5px 5px;
+}
+
+/* .Preview .Field .sub-Field input[type=radio] {
+
+    
+} */
+.Preview .Field .sub-Field input[type=email] {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.Preview .Field .sub-Field input[type=range] {
+    margin: 10px 0;
+    width: 100%;
+
+}
+
+.Preview .Field .sub-Field input[type=date] {
+    margin: 10px 0;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.Preview .Field .sub-Field input[type=time] {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.Preview .Field .sub-Field input[type=text] {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.Preview .Field .sub-Field textarea {
+    outline: none;
+    width: 100%;
+    margin: 10px 0;
+}
+
+@media(min-width:500px) {
+    .Preview-Body {
+        width: 70%;
+    }
+}
+
+@media(min-width:600px) {
+    .Preview-Body {
+        width: 60%;
+    }
+}
+
+@media(min-width:700px) {
+    .Preview-Body {
+        width: 50%;
+    }
+}
+
+@media(min-width:800px) {
+    .Preview-Body {
+        width: 45%;
+    }
+}

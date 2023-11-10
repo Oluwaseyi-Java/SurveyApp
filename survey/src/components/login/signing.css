@@ -1,28 +1,32 @@
 .App {}
 
+section {
+    width: 100%;
+    height: 100%;
+}
 
 .SignIn,
 .SignUp {
     width: 70%;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 20px;
-    border: 1px solid rgba(213, 213, 213, 0.553);
+
 }
 
 .SignIn h1,
 .SignUp h1 {
     text-transform: capitalize;
-    color: rgb(69, 131, 181);
+    color: hsla(232, 19%, 15%, 0.674);
     font-size: 1.9em;
 }
 
-.SignUp .Intro {
+.SignUp .Intro_text {
     font-size: 0.9em;
     font-weight: 600;
     color: rgb(109, 109, 109);
 }
 
-.SignIn .Intro {
+.SignIn .Intro_text {
     font-size: 1.2em;
     font-weight: 600;
     color: rgb(109, 109, 109);
@@ -39,12 +43,11 @@
 .SignUp .Input {
     display: flex;
     flex-direction: column;
-
 }
 
 .SignIn .Input label,
 .SignUp .Input label {
-    font-weight: lighter;
+    font-weight: 500;
     margin: 20px 0 5px;
 }
 
@@ -52,10 +55,11 @@
 .SignUp .Input input {
     outline: none;
     height: 25px;
-    border: none;
+    border: 2px solid hsla(232, 19%, 15%, 0.473);
+    border-radius: 2px;
     padding: 5px;
     font-size: 0.85em;
-    background-color: rgba(168, 209, 242, 0.231);
+    color: black;
 }
 
 .SignIn .Input.Password,
@@ -68,21 +72,22 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
+    cursor: pointer;
 }
 
 .SignIn button,
 .SignUp button {
-    margin: 20px 0;
+    margin: 15px 0;
     border: none;
     outline: none;
-    padding: 15px 20px;
+    padding: 10px;
     color: white;
     font-size: 1.1em;
     cursor: pointer;
     font-weight: 600;
     text-transform: uppercase;
     width: 100%;
-    background: rgb(69, 131, 181);
+    background: hsl(232, 19%, 15%);
     border-radius: 5px;
 }
 
@@ -93,6 +98,7 @@
 
 .SignIn section .remember-me p {
     font-size: 0.8em;
+
 }
 
 .SignIn section .remember-me input {

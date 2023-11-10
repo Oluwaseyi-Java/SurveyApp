@@ -1,10 +1,14 @@
 
-import axios from 'axios';
 import React from "react"
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Client from "./components/Client/Client";
 import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
+import Dashboard from './components/User/Dashboard';
+import SurveyBuilder from "./components/User/Surveybuilder"
+import FeedBack from "./components/User/FeedBack";
+
 
 function App() {
 
@@ -57,19 +61,27 @@ function App() {
 
   return (
     <div className="App">
-    
+
       <Routes>
-        <Route path="*" element={<SignIn/> } />
-        <Route path="/login" element={<SignIn/>} />
-        <Route path="/signup" element={<SignUp/>} />
+
+        <Route path="*" element={<SignIn />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/:userId/dashboard" element={<Dashboard />} />
+        <Route path="/:userId/feedback" element={<FeedBack />} />
+        <Route path="/:userId/surveyBuilder" element={<SurveyBuilder />} />
+        <Route path="/:postId/client" element={<Client />} />
       </Routes>
-      
-      </div>
-      // <button onClick={HandleLogin}>Login</button>
-      // <button onClick={HandleSignUp}>SignUp</button>
-      // <button onClick={HandleSurvey}>Create a survey</button>
-      // <button onClick={HandleResponse}>Response</button>
-      // <button onClick={HandleQuestion}>Question</button>
+
+
+
+    </div>
+
+    // <button onClick={HandleLogin}>Login</button>
+    // <button onClick={HandleSignUp}>SignUp</button>
+    // <button onClick={HandleSurvey}>Create a survey</button>
+    // <button onClick={HandleResponse}>Response</button>
+    // <button onClick={HandleQuestion}>Question</button>
 
   );
 }

@@ -68,90 +68,92 @@ const SignIn = () => {
     }
 
     return (
-        <div className='SignIn'>
-            <h1>Welcome back,</h1>
-            <p className='Intro'>Login to continue...</p>
-            <section>
-                <p className='error-message'>{message}</p>
-                <form onSubmit={HandleSubmit}>
-                    <div className='Input Input'>
-                        <label htmlFor='email' >Email*</label>
-                        <input type="email"
-                            value={login.email}
-                            name="email"
-                            onChange={(e) => {
-                                e.preventDefault();
-                                setLogin({
-                                    ...login,
-                                    email: e.target.value
-                                })
-                            }} />
+        <section>
+            <div className='SignIn'>
+                <h1>Welcome back,</h1>
+                <p className='Into_text'>Login to continue...</p>
+                <section>
+                    <p className='error-message'>{message}</p>
+                    <form onSubmit={HandleSubmit}>
+                        <div className='Input Input'>
+                            <label htmlFor='email' >Email*</label>
+                            <input type="email"
+                                value={login.email}
+                                name="email"
+                                onChange={(e) => {
+                                    e.preventDefault();
+                                    setLogin({
+                                        ...login,
+                                        email: e.target.value
+                                    })
+                                }} />
 
-                    </div>
-                    <div className='Input Password'>
-                        <label htmlFor='password' >Password*</label>
+                        </div>
+                        <div className='Input Password'>
+                            <label htmlFor='password' >Password*</label>
 
-                        <input
-                            type={`${showPassword ? "text" : "password"}`}
-                            value={login.password}
-                            name="password"
-                            onChange={(e) => {
-                                e.preventDefault();
-                                setLogin({
-                                    ...login,
-                                    password: e.target.value
-                                })
-                            }} />
-                        {!showPassword && <FaEye className='eye'
-                            onClick={() => {
-                                setShowPassword(!showPassword)
-                            }}
-                        />}
-                        {showPassword && <FaEyeSlash className='eye'
-                            onClick={() => {
-                                setShowPassword(!showPassword)
-                            }}
-                        />}
-                    </div>
-                    <div className='remember-me'>
-                        <p>Remember me </p>
-                        <input type="checkbox"
-                            name='remember'
-                            checked={checked}
-                            value={checked}
-                            onChange={(e) => {
-                                setChecked(e.target.checked)
-                                if (e.target.checked) {
-                                    if ((login.email || login.password) === "") {
-                                        setMessage("Email and a password is needed")
+                            <input
+                                type={`${showPassword ? "text" : "password"}`}
+                                value={login.password}
+                                name="password"
+                                onChange={(e) => {
+                                    e.preventDefault();
+                                    setLogin({
+                                        ...login,
+                                        password: e.target.value
+                                    })
+                                }} />
+                            {!showPassword && <FaEye className='eye'
+                                onClick={() => {
+                                    setShowPassword(!showPassword)
+                                }}
+                            />}
+                            {showPassword && <FaEyeSlash className='eye'
+                                onClick={() => {
+                                    setShowPassword(!showPassword)
+                                }}
+                            />}
+                        </div>
+                        <div className='remember-me'>
+                            <p>Remember me </p>
+                            <input type="checkbox"
+                                name='remember'
+                                checked={checked}
+                                value={checked}
+                                onChange={(e) => {
+                                    setChecked(e.target.checked)
+                                    if (e.target.checked) {
+                                        if ((login.email || login.password) === "") {
+                                            setMessage("Email and a password is needed")
+                                        } else {
+                                            setMessage("")
+                                            window.localStorage.setItem("Details", JSON.stringify({
+                                                isChecked: e.target.checked,
+                                                email: login.email,
+                                                password: login.password
+                                            }))
+                                        }
                                     } else {
+
                                         setMessage("")
-                                        window.localStorage.setItem("Details", JSON.stringify({
-                                            isChecked: e.target.checked,
-                                            email: login.email,
-                                            password: login.password
-                                        }))
                                     }
-                                } else {
+                                }}
+                            />
 
-                                    setMessage("")
-                                }
-                            }}
-                        />
+                        </div>
+                        <button>Login</button>
+                    </form>
+                </section>
 
-                    </div>
-                    <button>Login</button>
-                </form>
-            </section>
-
-            <div className='Newlink'>
-                <p className='new'>New member? <span
-                    onClick={() => {
-                        window.location.assign("/signup")
-                    }}
-                >Sign up/Register</span></p>
+                <div className='Newlink'>
+                    <p className='new'>New member? <span
+                        onClick={() => {
+                            window.location.assign("/signup")
+                        }}
+                    >Sign up/Register</span></p>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 

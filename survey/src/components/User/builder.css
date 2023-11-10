@@ -1,0 +1,205 @@
+h2 {
+    color: black;
+}
+
+.Builder {
+    width: 100%;
+    background: rgba(59, 59, 59, 0.054);
+    min-height: 800px;
+
+
+}
+
+.builder-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 10%;
+}
+
+.builder-header p {
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    /* background-color: hsla(234, 14%, 28%, 0.519); */
+}
+
+.builder-header p:hover {
+    color: white;
+}
+
+.Builder-Body {
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.Intro {
+    margin: auto;
+    /* width: 90%; */
+    padding: 20px 0;
+    color: #252a41d9;
+    text-align: left;
+
+}
+.Intro .InputField textarea{
+    min-height: 100px;
+    width: 100%;
+}
+.Intro h3 {}
+
+.backgroundImage {}
+
+.builder-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    width: 60%;
+    background-color: #252a41d9;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.field-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 70%;
+    background-color: hsl(228, 28%, 20%);
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.Builder-Field {
+    background-color: aqua;
+    margin: 20px 0;
+    background: rgba(251, 254, 255, 0.416);
+    box-shadow: 0px 2px 15px #c2c2c245;
+}
+
+.Builder-Field .Field-Header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    max-height: 30px;
+    padding: 10px 10px;
+}
+
+.Builder-Field .Field-Header p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #696868;
+    text-transform: capitalize;
+}
+
+.Builder-Field .Field-Header span .hamburger {
+    margin: auto;
+    color: #696868;
+}
+
+.Builder-Field .Builder-Subfield {
+    background-color: white;
+    width: 90%;
+    margin: 10px auto;
+
+}
+
+.Builder-Subfield {
+    padding: 10px 10px;
+}
+
+.Builder-Subfield .subField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #696868;
+}
+
+.Builder-Subfield .subfield {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.Builder-Subfield .subField .edit {
+    cursor: pointer;
+}
+
+.Builder-Subfield .subfield .field p {
+    color: #696868;
+    margin: 2px 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.Builder-Subfield .subfield .field .one {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.Builder-Subfield .subfield .field .two {
+    font-size: 1.0em;
+}
+
+
+
+
+
+
+
+
+
+.Modal .BuilderSelect {
+    display: flex;
+    margin: 20px 0;
+}
+
+.Modal .BuilderSelect p {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.Modal .BuilderSelect #a1 {
+    color: white;
+    padding: 5px;
+    background: hsl(228, 28%, 20%);
+}
+
+.Modal .BuilderSelect #a2 {
+    padding: 5px;
+    background: white;
+    border: 1px solid hsl(228, 28%, 20%);
+}
+
+
+@media(min-width:500px) {
+    .Builder-Body {
+        width: 70%;
+    }
+}
+
+@media(min-width:600px) {
+    .Builder-Body {
+        width: 60%;
+    }
+}
+
+@media(min-width:700px) {
+    .Builder-Body {
+        width: 50%;
+    }
+}
+
+@media(min-width:800px) {
+    .Builder-Body {
+        width: 45%;
+    }
+}

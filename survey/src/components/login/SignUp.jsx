@@ -61,74 +61,76 @@ const SignUp = () => {
     }
 
     return (
-        <div className='SignUp'>
-            <h1>Create account</h1>
-            <p className='Intro'>We are excited to have you, Please fill in your details.</p>
-            <section>
-                <p className='error-message'>{message}</p>
-                <form onSubmit={HandleSubmit}>
-                    <div className='Input Name'>
-                        <label htmlFor='name'>Name*</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={register.name}
-                            onChange={HandleChange} />
-                    </div>
-                    <div className='Input Email'>
-                        <label htmlFor='email'>Email*</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={register.email}
-                            onChange={HandleChange} />
-                    </div>
-                    <div className='Input UserName'>
-                        <label htmlFor='userName'>Username*</label>
-                        <input
-                            type="text"
-                            name="userName"
-                            value={register.userName}
-                            onChange={HandleChange} />
-                    </div>
-                    <div className='Input PhoneNo'>
-                        <label htmlFor='phoneNo'>Phone No.*</label>
-                        <input
-                            type="tel"
-                            name="phoneNo"
-                            value={register.phoneNo}
-                            onChange={HandleChange} />
-                    </div>
-                    <div className='Input Password'>
-                        <label htmlFor='password'>Password*</label>
-                        <input
-                            type={`${showPassword ? "text" : "password"}`}
-                            name='password'
-                            value={register.password}
-                            onChange={HandleChange} />
+        <section>
+            <div className='SignUp'>
+                <h1>Create account</h1>
 
-                        {!showPassword && <FaEye className='eye'
-                            onClick={() => {
-                                setShowPassword(!showPassword)
-                            }}
-                        />}
-                        {showPassword && <FaEyeSlash className='eye'
-                            onClick={() => {
-                                setShowPassword(!showPassword)
-                            }}
-                        />}
-                    </div>
-                    <button>Register</button>
-                </form>
-            </section>
-            <div className='Newlink'>
-                <p className='new'>Have an account? <span
-                    onClick={() => {
-                        window.location.assign("/login")
-                    }}
-                >Login</span></p>
+                <section>
+                    <p className='error-message'>{message}</p>
+                    <form onSubmit={HandleSubmit}>
+                        <div className='Input Name'>
+                            <label htmlFor='name'>Name*</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={register.name}
+                                onChange={HandleChange} />
+                        </div>
+                        <div className='Input Email'>
+                            <label htmlFor='email'>Email*</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={register.email}
+                                onChange={HandleChange} />
+                        </div>
+                        <div className='Input UserName'>
+                            <label htmlFor='userName'>Username*</label>
+                            <input
+                                type="text"
+                                name="userName"
+                                value={register.userName}
+                                onChange={HandleChange} />
+                        </div>
+                        <div className='Input PhoneNo'>
+                            <label htmlFor='phoneNo'>Phone No.*</label>
+                            <input
+                                type="tel"
+                                name="phoneNo"
+                                value={register.phoneNo}
+                                onChange={HandleChange} />
+                        </div>
+                        <div className='Input Password'>
+                            <label htmlFor='password'>Password*</label>
+                            <input
+                                type={`${showPassword ? "text" : "password"}`}
+                                name='password'
+                                value={register.password}
+                                onChange={HandleChange} />
+
+                            {!showPassword && <FaEye className='eye'
+                                onClick={() => {
+                                    setShowPassword(!showPassword)
+                                }}
+                            />}
+                            {showPassword && <FaEyeSlash className='eye'
+                                onClick={() => {
+                                    setShowPassword(!showPassword)
+                                }}
+                            />}
+                        </div>
+                        <button>Register</button>
+                    </form>
+                </section>
+                <div className='Newlink'>
+                    <p className='new'>Have an account? <span
+                        onClick={() => {
+                            window.location.assign("/login")
+                        }}
+                    >Login</span></p>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 
